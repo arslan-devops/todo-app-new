@@ -1,0 +1,21 @@
+version: 0.2
+
+env:
+  parameter-store:
+    #build_ssh_key: 'build_ssh_key'
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+      - npm install
+  build:
+    commands:
+      - echo 'Building'
+      #- npm start
+artifacts:
+  files:
+    - '**/*'
